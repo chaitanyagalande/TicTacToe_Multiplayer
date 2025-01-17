@@ -9,7 +9,6 @@ An interactive multiplayer Tic Tac Toe game built using **React.js** and **Socke
 - **Real-time Gameplay**: Play live matches with opponents using **Socket.io**.
 - **Online Matchmaking**: Automatically find opponents or wait for a match to begin.
 - **Dynamic Winner Detection**: Automatically determines the winner or detects a draw.
-- **Responsive UI**: Designed for an intuitive experience across all devices.
 - **Robust State Management**: Efficiently handles game reconnections and opponent disconnections using **React hooks**.
 - **Real-time Synchronization**: Ensures the game state remains consistent between players.
 
@@ -28,19 +27,19 @@ An interactive multiplayer Tic Tac Toe game built using **React.js** and **Socke
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/online-tic-tac-toe.git
-   cd online-tic-tac-toe
+   git clone https://github.com/chaitanyagalande/TicTacToe_Multiplayer
+   cd TicTacToe_Multiplayer
 
-2. Start the development server:
+2. Start the development server inside client:
+   ```bash
+   npm run dev
+
+3. Start the backend server inside server (in another terminal):
    ```bash
    npm start
 
-3. Start the backend server (in another terminal):
-   ```bash
-   node server.js
-
 4. Open the app in your browser:
-   http://localhost:3000
+   http://localhost:5173
 
 ## Usage
 1. Open the app and either wait for an opponent or start a game immediately.
