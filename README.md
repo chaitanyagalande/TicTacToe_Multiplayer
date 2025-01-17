@@ -49,7 +49,13 @@ An interactive multiplayer Tic Tac Toe game built using **React.js** and **Socke
 4. If a player disconnects, the game state handles it gracefully.
 
 ## Screenshots
-Add screenshots here to showcase the interface and gameplay.
+
+![Game Start](Screenshots/1.png)
+![Game Start](Screenshots/2.png)
+![Game Start](Screenshots/3.png)
+![Game Start](Screenshots/4.png)
+![Game Start](Screenshots/5.png)
+![Game Start](Screenshots/6.png)
 
 ## License
 This project is licensed under the MIT License.
