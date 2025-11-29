@@ -4,6 +4,9 @@ import Square from "./Square/Square"; // Import the Square component to render i
 import { io } from "socket.io-client"; // Import socket.io client to handle WebSocket connections
 import Swal from "sweetalert2"; // Import SweetAlert2 for displaying alerts
 
+// ✅ Socket URL from ENV (works for localhost + Netlify)
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL;
+
 // Initial state of the board
 const initialBoardState = [
   [1, 2, 3],
@@ -130,7 +133,10 @@ const App = () => {
 
     setPlayerName(result.value); // Set the player's name in state
 
-    const newSocket = io("http://localhost:3000"); // Create a new socket connection
+    const newSocket = io(SOCKET_URL, {
+      transports: ["websocket"],
+      autoconnect: true,
+    }); // Create a new socket connection
     newSocket.emit("request_to_play", { playerName: result.value }); // Emit a request to play with the server
     setSocket(newSocket); // Set the socket state
   };

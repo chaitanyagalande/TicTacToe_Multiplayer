@@ -1,10 +1,12 @@
 const { createServer } = require('http'); 
 const { Server } = require('socket.io');
+require("dotenv").config();
 
 const httpServer = createServer(); 
 const io = new Server(httpServer, {
     cors: { 
-        origin: "http://localhost:5173",
+        origin: process.env.CLIENT_URL || "http://localhost:5173",
+        methods: ["GET", "POST"]
     },
 });
 
@@ -112,6 +114,8 @@ io.on("connection", (socket) => { // Listen for new client connections
 });
 
 // Start the server
-httpServer.listen(3000, () => { 
-    console.log("Server is listening on port 3000"); 
+const PORT = process.env.PORT || 3000;
+
+httpServer.listen(PORT, () => {
+  console.log("Server is listening on port", PORT);
 });
